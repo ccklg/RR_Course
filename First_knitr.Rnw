@@ -6,9 +6,20 @@
 
 This is our 1st knitr document
 
-<<>>=
+<< echo=TRUE, results='markup' >>=
 x <- 1:10
+par(mfrow = c(1, 2))
 plot(x)
+plot(1-x)
+print(x)
+@
+
+<< echo=TRUE, results='asis' >>=
+x <- 1:10
+par(mfrow = c(1, 2))
+plot(x)
+plot(1-x)
+print(x)
 @
 
 
