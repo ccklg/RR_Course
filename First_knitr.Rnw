@@ -19,7 +19,7 @@ plot(1-x)
 print(x)
 @
 
-<< echo=TRUE, results='asis' >>=
+<< echo=TRUE, results='asis', fig.width=16, fig.height=9 >>=
 x <- 1:10
 par(mfrow = c(1, 2))
 plot(x)
@@ -40,6 +40,21 @@ TAB <- table(x)
 xtable(TAB)
 @
 
+Now use cache to speed up computations.
+
+<<first_cache, cache=TRUE>>=
+Sys.sleep(5)
+plot(1:3, main = "cache figure")
+@
+
+<<random, cache=TRUE>>=
+set.seed(1234)
+rnorm(15)
+@
+
+<<r2, cache=TRUE>>=
+rnorm(10)
+@
 
 
 
