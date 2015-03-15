@@ -1,5 +1,10 @@
 \documentclass{article}
 
+<<load_pkg, include = FALSE>>=
+library(xtable)
+@
+
+
 \begin{document}
 
 \section{First Heading}
@@ -21,6 +26,21 @@ plot(x)
 plot(1-x)
 print(x)
 @
+
+% A latex comment
+
+<< init, include=FALSE >>=
+## from now on no echo
+opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+@
+
+% For tables use 'results = "asis"'
+<< create_table, results = "asis" >>=
+TAB <- table(x)
+xtable(TAB)
+@
+
+
 
 
 \end{document}
