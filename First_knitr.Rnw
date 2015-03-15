@@ -1,0 +1,15 @@
+\documentclass{article}
+
+\begin{document}
+
+\section{First Heading}
+
+This is our 1st knitr document
+
+<<>>=
+x <- 1:10
+plot(x)
+@
+
+
+\end{document}
